@@ -18,7 +18,6 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
   const session = await getServerSession(authOptions)
-  console.log(session)
   return (
     <html lang='en' className='h-full'>
       <body className='flex h-full flex-col justify-between '>

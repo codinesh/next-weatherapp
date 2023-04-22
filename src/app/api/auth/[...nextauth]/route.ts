@@ -8,10 +8,11 @@ export const authOptions: AuthOptions = {
       clientSecret: process.env.GITHUB_SECRET!,
     }),
   ],
+  session: {
+    strategy: 'jwt',
+  },
   callbacks: {
     async jwt({ token, user, account, profile }) {
-      console.log('jwt', token, account, user, profile)
-
       if (user) {
         token.id = user.id
       }
@@ -34,6 +35,9 @@ export const authOptions: AuthOptions = {
         token.middleName = 'TestMN'
         // @ts-ignore
         token.userid = profile['custom:id']
+
+        // @ts-ignore
+        token.all = JSON.stringify(profile)
       }
       return token
     },
@@ -56,6 +60,10 @@ export const authOptions: AuthOptions = {
       session.middleName = token.middleName
       // @ts-ignore
       session.userid = token.userid
+
+      session.customProps = (token.all as string) ?? 'Empty'
+      // @ts-ignore
+      session.user.token = token.accessToken
 
       return session
     },

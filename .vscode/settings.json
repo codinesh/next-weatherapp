@@ -1,0 +1,18 @@
+{
+  "workbench.colorCustomizations": {
+    "sash.hoverBorder": "#b38090",
+    "statusBar.background": "#a06074",
+    "statusBar.border": "#a06074",
+    "statusBar.debuggingBackground": "#60a08c",
+    "statusBar.debuggingBorder": "#60a08c",
+    "statusBar.debuggingForeground": "#15202b",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#b38090",
+    "statusBarItem.remoteBackground": "#a06074",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "tab.activeBorder": "#b38090"
+  },
+  "peacock.color": "#a06074",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
+}

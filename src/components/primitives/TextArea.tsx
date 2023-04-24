@@ -1,4 +1,3 @@
-import { maxValue } from '@/constants/defaultConstant'
 import * as Label from '@radix-ui/react-label'
 export interface ITextAreaProps {
 	labelName: string
@@ -16,7 +15,7 @@ const TextArea = ({
 	name,
 	value,
 	placeholder,
-	maxLength = maxValue.MAX_LENGTH,
+	maxLength = 100,
 	required,
 	errorMsg,
 	fullErrMsg,
